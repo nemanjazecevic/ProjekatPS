@@ -119,7 +119,7 @@ public class KontrolerUnosIgraca {
         try{
             datum = new SimpleDateFormat("yyyy-MM-dd").parse(jpanel.getjTxtDatum().getText());
         }catch(Exception e){
-            throw new Exception("Unesite ispravan format datuma");
+            throw new Exception("Unesite ispravan format datuma(yyyy-MM-dd)");
         }
         Tim t = (Tim) jpanel.getjCmbTim().getSelectedItem();
         Long id = new Long(0);

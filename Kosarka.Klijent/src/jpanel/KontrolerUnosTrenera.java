@@ -91,14 +91,14 @@ public class KontrolerUnosTrenera {
         try{
             datum = new SimpleDateFormat("yyyy-MM-dd").parse(jpanel.getjTxtDatum().getText());
         }catch(Exception e){
-            throw new Exception("Unesite ispravan format datuma");
+            throw new Exception("Unesite ispravan format datuma(yyyy-MM-dd)");
         }
         Long id = new Long(0);
         if(trener != null){
             id = trener.getIdClana();
         }
-        if(jmbg.trim().length() != 12){
-            throw new Exception("JMBG mora imati tacno 12 cifara");
+        if(jmbg.trim().length() != 13){
+            throw new Exception("JMBG mora imati tacno 13 cifara");
         }
         
         Trener trener = new Trener(id, ime, prezime, jmbg,datum,licenca);
